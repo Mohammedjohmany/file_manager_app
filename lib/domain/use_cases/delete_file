@@ -1,0 +1,11 @@
+import 'package:file_manager_app/domain/repositories/file_manager_repository.dart';
+
+class DeleteFile {
+  final FileManagerRepository repository;
+
+  DeleteFile(this.repository);
+
+  Future<void> call(String path) async {
+    return repository.deleteFile(path);
+  }
+}
